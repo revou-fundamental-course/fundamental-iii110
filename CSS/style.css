@@ -1,0 +1,278 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+/* Gaya Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* Gaya Logo */
+.logo {
+    font-weight: bold;
+}
+
+/* Responsif untuk Tampilan Mobile */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+.burger-menu {
+    display: none; /* Sembunyikan burger menu secara default */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Tampilkan burger menu */
+    }
+
+    nav ul {
+        display: none; /* Sembunyikan menu navigasi */
+    }
+}
+
+/* Tambahkan media query untuk layar yang lebih besar */
+@media screen and (min-width: 769px) {
+    nav ul {
+        display: flex; /* Tampilkan menu navigasi */
+    }
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+
+/* Gaya Banner */
+.banner {
+    background-image: url('https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Gaya Our Profile */
+#ourprofile {
+    background-color: #969696;
+    padding: 50px;
+}
+
+.profile-photos {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photos img {
+    margin: 0 10px;
+}
+
+
+
+/* Gaya Output Message */
+#outputMessage {
+    margin-top: 10px;
+    color: #969696;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#messageForm{
+    width: 50%;
+    display: grid;
+    background-color: #969696;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#ourprofile{
+    background-color: #5c5c5c;
+}
+
+/* Gaya Profile Photos */
+.profile-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-photos img {
+    width: 100px;
+    margin: 10px;
+    clip-path: circle(50% at center);
+    position: relative;
+}
+
+.profile-photos img::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Responsif untuk Tampilan Mobile */
+@media screen and (max-width: 768px) {
+    .profile-photos {
+        flex-wrap: wrap;
+    }
+
+    .profile-photos img {
+        width: 100px;
+        margin: 5px;
+    }
+
+    /* Menampilkan sisanya di bawah */
+    .profile-photos img:nth-child(n+4) {
+        order: 2;
+    }
+}
+
+.profile-photos {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photos div {
+    position: relative;
+    text-align: center;
+}
+
+.profile-photos img {
+    width: 100px; /* Atur lebar gambar */
+    margin: 10px; /* Atur jarak antara gambar */
+    margin: 30px;
+}
+
+.profile-photos h4 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    padding: 5px; 
+    border-radius: 5px;
+    padding: 3px;
+}
+
+input{
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: #969696;
+    background-color: #ffffff;
+    color: rgb(77, 77, 77);
+}
+
+#name{
+    height: 20px;
+}
+
+#birthDate{
+    height: 20px;
+}
+
+#gender{
+    height: 20px;
+    border-radius: 3px;
+}
+
+#message{
+    border-radius: 4px;
+    border-color: #ffffff;
+}
+
+.logo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+#about{
+    background-color: #969696;
+    padding: 50px;
+}
+
+#about h3{
+    margin-left: 65px;
+    margin-top: 20px;
+    color: #ececec;
+    font-size: 30px;
+}
+#about h4{
+    margin-left: 65px;
+    color: #f5f5f5;
+    font-size: 25px;
+}
+#about p{
+    margin-left: 80px;
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+#outputMessage{
+    justify-content: center;
+    border-left-style: inset;
+    height: 150px;
+    width: 250px;
+}
+#messageus{
+    padding: 50px;
+}
+
